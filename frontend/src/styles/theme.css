@@ -1,0 +1,74 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ===== DARK TRADING BACKGROUND ===== */
+.app-root {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #0ea5e9 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #ec4899 0%, transparent 40%),
+    linear-gradient(180deg, #020617, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  width: 460px;
+  padding: 36px;
+  border-radius: 28px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ===== SIGNAL TEXT ===== */
+.signal {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+/* ===== INFO TEXT ===== */
+.info {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+/* ===== CONFIDENCE BAR ===== */
+.conf-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  overflow: hidden;
+}
+
+.conf-fill {
+  height: 100%;
+  transition: width 0.8s ease;
+}
+
+/* ===== REGIME BADGE ===== */
+.badge {
+  margin-top: 18px;
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+}

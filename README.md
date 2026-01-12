@@ -914,6 +914,9 @@ For issues, questions, or contributions:
 4. Follow the project's contribution guidelines
 
 ---
+-------Images for Guidance------------
+<img width="1488" height="488" alt="image" src="https://github.com/user-attachments/assets/3fac0b79-b772-4c1a-a76d-751bdbbebb0c" />
+
 
 **Last Updated**: January 2026
 **Version**: 1.0.0

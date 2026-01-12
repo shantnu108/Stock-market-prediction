@@ -915,7 +915,43 @@ For issues, questions, or contributions:
 
 ---
 -------Images for Guidance------------
-<img width="1488" height="488" alt="image" src="https://github.com/user-attachments/assets/3fac0b79-b772-4c1a-a76d-751bdbbebb0c" />
+
+
+<img width="1916" height="1019" alt="Screenshot 2026-01-12 182047" src="https://github.com/user-attachments/assets/1d3b6dd4-ec27-4497-9adb-e382db833586" />
+
+
+<img width="1917" height="1018" alt="Screenshot 2026-01-12 182109" src="https://github.com/user-attachments/assets/34a3e214-8bc0-4ff6-82c0-82a949dcf8a4" />
+
+
+<img width="1919" height="1022" alt="Screenshot 2026-01-12 182126" src="https://github.com/user-attachments/assets/9acc68e4-2005-4983-b2fa-c4ec139a1447" />
+
+
+<img width="1919" height="1019" alt="Screenshot 2026-01-12 182137" src="https://github.com/user-attachments/assets/dbe3486b-09ca-423a-be3f-cc933fd6d8ea" />
+
+
+<img width="1919" height="1016" alt="Screenshot 2026-01-12 182149" src="https://github.com/user-attachments/assets/692c097a-af48-4074-bd52-e534e5e8c3d0" />
+
+
+<img width="1919" height="1022" alt="Screenshot 2026-01-12 182301" src="https://github.com/user-attachments/assets/0576a579-a2f2-4d07-9c0c-c36b885a1fa5" />
+
+
+<img width="1919" height="1020" alt="Screenshot 2026-01-12 182415" src="https://github.com/user-attachments/assets/56d6d496-122f-46fa-9d44-fef753f99526" />
+
+
+<img width="1915" height="1015" alt="Screenshot 2026-01-12 182558" src="https://github.com/user-attachments/assets/530c51a4-67df-4012-9c46-39c159104545" />
+
+
+<img width="1919" height="1018" alt="Screenshot 2026-01-12 182032" src="https://github.com/user-attachments/assets/bb49dbe2-65b5-42ce-a3d2-42deb6e2e334" />
+
+
+<img width="1919" height="1021" alt="Screenshot 2026-01-12 182057" src="https://github.com/user-attachments/assets/84cf8bf7-7928-4e61-b5a7-805587b85ba3" />
+
+
+<img width="1915" height="1015" alt="Screenshot 2026-01-12 182558" src="https://github.com/user-attachments/assets/06a2ca7b-b5f4-4ecd-ae37-22ef621af752" />
+
+
+<img width="1489" height="489" alt="Screenshot 2026-01-12 182616" src="https://github.com/user-attachments/assets/4af73006-9230-4b48-b74e-95430bb1e1f1" />
+
 
 
 **Last Updated**: January 2026

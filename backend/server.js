@@ -27,12 +27,10 @@ app.use("/api/history", historyRoutes);
 // MONGODB CONNECTION
 // --------------------
 mongoose
-  .connect(
-    process.env.MONGO_URI || 
-    "mongodb+srv://shantnuswami1008_db_user:yybDveatgyWUV7nH@cluster0.5wvrcp3.mongodb.net/stock_predictions?retryWrites=true&w=majority"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB error:", err.message));
+  .catch(err => console.error("MongoDB error:", err.message));
+
 
 // --------------------
 // HEALTH CHECK

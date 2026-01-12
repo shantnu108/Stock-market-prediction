@@ -30,7 +30,10 @@ export default function App() {
       {!data ? (
         <Home onSearch={fetchPrediction} loading={loading} />
       ) : (
-        <Dashboard data={data} />
+        <Dashboard
+          data={data}
+          onReset={() => setData(null)}
+        />
       )}
     </div>
   );

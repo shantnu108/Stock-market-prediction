@@ -4,19 +4,29 @@ export default function Home({ onSearch, loading }) {
   const [symbol, setSymbol] = useState("AAPL");
 
   return (
-    <div>
-      <h1>Stock Predictor</h1>
+    <div className="glass-card hero-search">
+      <h1 className="hero-title">Stock Predictor</h1>
 
-      <input
-        value={symbol}
-        onChange={(e) => setSymbol(e.target.value.toUpperCase())}
-      />
+      <p className="hero-subtitle">
+        AI-powered market signal & regime analysis
+      </p>
 
-      <br /><br />
+      <div className="hero-search-box">
+        <input
+          className="hero-input"
+          value={symbol}
+          onChange={(e) => setSymbol(e.target.value.toUpperCase())}
+          placeholder="Enter stock symbol (AAPL, MSFT, TSLA)"
+        />
 
-      <button onClick={() => onSearch(symbol)} disabled={loading}>
-        {loading ? "Predicting..." : "Predict"}
-      </button>
+        <button
+          className="hero-button"
+          onClick={() => onSearch(symbol)}
+          disabled={loading}
+        >
+          {loading ? "Analyzing..." : "Predict"}
+        </button>
+      </div>
     </div>
   );
 }

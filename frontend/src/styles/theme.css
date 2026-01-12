@@ -64,11 +64,169 @@ html, body {
   transition: width 0.8s ease;
 }
 
-/* ===== REGIME BADGE ===== */
+/* ===== REGIME BADGE ====uuu= */
 .badge {
   margin-top: 18px;
   display: inline-block;
   padding: 8px 18px;
   border-radius: 999px;
   font-weight: 600;
+}
+button {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.search-box input {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* ===== HERO SEARCH ===== */
+.hero-search {
+  width: 520px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  opacity: 0.7;
+  margin-bottom: 28px;
+}
+
+/* SEARCH BAR */
+.hero-search-box {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-input {
+  flex: 1;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.hero-input::placeholder {
+  color: #94a3b8;
+}
+
+.hero-button {
+  padding: 16px 26px;
+  border-radius: 18px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* TOP BAR */
+.dashboard-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+/* TABS */
+.tab-group {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+}
+
+/* CHANGE SYMBOL BUTTON */
+.change-btn {
+  padding: 12px 20px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: rgba(239,68,68,0.15);
+  color: #fecaca;
+}
+
+.change-btn:hover {
+  background: rgba(239,68,68,0.25);
+}
+canvas {
+  max-width: 100% !important;
+}
+canvas {
+  display: block;
+}
+
+/* TABS */
+.tab-btn {
+  padding: 10px 20px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(255,255,255,0.12);
+  color: #e5e7eb;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+}
+
+/* CHANGE SYMBOL */
+.change-btn {
+  padding: 12px 22px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: rgba(239,68,68,0.18);
+  color: #fecaca;
+}
+
+.change-btn:hover {
+  background: rgba(239,68,68,0.3);
+}
+
+/* CHART SAFETY */
+canvas {
+  display: block;
 }

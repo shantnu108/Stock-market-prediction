@@ -1,8 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+// LOAD ENV FIRST (VERY IMPORTANT)
+dotenv.config();
 
 const predictRoutes = require("./routes/predict");
+const historyRoutes = require("./routes/history");
 
 const app = express();
 
@@ -13,19 +18,21 @@ app.use(cors());
 app.use(express.json());
 
 // --------------------
+// ROUTES
+// --------------------
+app.use("/api", predictRoutes);
+app.use("/api/history", historyRoutes);
+
+// --------------------
 // MONGODB CONNECTION
 // --------------------
 mongoose
   .connect(
+    process.env.MONGO_URI || 
     "mongodb+srv://shantnuswami1008_db_user:yybDveatgyWUV7nH@cluster0.5wvrcp3.mongodb.net/stock_predictions?retryWrites=true&w=majority"
   )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB error:", err.message));
-
-// --------------------
-// ROUTES
-// --------------------
-app.use("/api", predictRoutes);
 
 // --------------------
 // HEALTH CHECK
@@ -36,7 +43,7 @@ app.get("/", (req, res) => {
 
 // --------------------
 // START SERVER
-// --------------------gb
+// --------------------
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Node server running on http://localhost:${PORT}`);

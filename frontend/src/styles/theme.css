@@ -230,3 +230,42 @@ canvas {
 canvas {
   display: block;
 }
+/* CHART BOX */
+.chart-box {
+  width: 900px;
+  height: 460px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TIMEFRAME BAR */
+.timeframe-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tf-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(255,255,255,0.12);
+  color: #e5e7eb;
+}
+
+.tf-btn.active {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  color: #020617;
+}
+.chart-disclaimer {
+  margin-top: 8px;
+  font-size: 10px;              /* very small but readable */
+  line-height: 1.3;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
+  user-select: none;
+}

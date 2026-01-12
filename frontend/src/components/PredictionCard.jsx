@@ -38,6 +38,9 @@ export default function PredictionCard({ data }) {
       >
         Regime {data.regime}
       </span>
+      <p className="chart-disclaimer">
+  The prognostications herein are derived from patterns of markets past, and shall not be construed as counsel for trade in present time.
+</p>
     </div>
   );
 }

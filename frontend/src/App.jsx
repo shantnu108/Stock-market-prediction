@@ -27,13 +27,19 @@ export default function App() {
 
   return (
     <div className="app-root">
+      <a
+        href="https://github.com/shantnu108"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="github-link"
+      >
+        &lt;/DEV&gt;
+      </a>
+
       {!data ? (
         <Home onSearch={fetchPrediction} loading={loading} />
       ) : (
-        <Dashboard
-          data={data}
-          onReset={() => setData(null)}
-        />
+        <Dashboard data={data} onReset={() => setData(null)} />
       )}
     </div>
   );

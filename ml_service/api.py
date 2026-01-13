@@ -5,6 +5,7 @@ import numpy as np
 
 from ml_service.data_fetch import fetch_stock_data
 from ml_service.feature_engineer import create_features
+from fastapi import FastAPI
 
 # -------------------------------------------------
 # APP INIT

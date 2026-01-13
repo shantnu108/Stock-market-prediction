@@ -3,9 +3,11 @@ from pydantic import BaseModel
 import joblib
 import numpy as np
 
-from ml_service.data_fetch import fetch_stock_data
-from ml_service.feature_engineer import create_features
+from data_fetch import fetch_stock_data
+# from ml_service.data_fetch import fetch_stock_data
+# from ml_service.feature_engineer import create_features
 from fastapi import FastAPI
+from feature_engineer import create_features
 
 # -------------------------------------------------
 # APP INIT

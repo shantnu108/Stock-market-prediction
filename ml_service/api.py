@@ -21,7 +21,7 @@ app = FastAPI(
 # -------------------------------------------------
 # LOAD MODEL
 # -------------------------------------------------
-model_data = joblib.load("ml_service/model.pkl")
+model_data = joblib.load("model.pkl")
 model = model_data["model"]
 feature_cols = model_data["features"]
 

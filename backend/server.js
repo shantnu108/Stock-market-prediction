@@ -2,11 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const axios = require("axios");
 
-// LOAD ENV FIRST (VERY IMPORTANT)
+// LOAD ENV FIRST
 dotenv.config();
 
-const predictRoutes = require("./routes/predict");
+const predictRoutes = require("./routes/predict"); // FIXED NAME
 const historyRoutes = require("./routes/history");
 
 const app = express();
@@ -24,15 +25,6 @@ app.use("/api", predictRoutes);
 app.use("/api/history", historyRoutes);
 
 // --------------------
-// MONGODB CONNECTION
-// --------------------
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.error("MongoDB error:", err.message));
-
-
-// --------------------
 // HEALTH CHECK
 // --------------------
 app.get("/", (req, res) => {
@@ -42,7 +34,15 @@ app.get("/", (req, res) => {
 // --------------------
 // START SERVER
 // --------------------
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Node server running on http://localhost:${PORT}`);
+  console.log(`Node server running on port ${PORT}`);
 });
+
+// --------------------
+// MONGODB CONNECTION
+// --------------------
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.error("MongoDB error:", err.message));

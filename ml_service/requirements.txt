@@ -8,4 +8,4 @@ joblib
 fastapi
 uvicorn
 pydantic
-
+ta

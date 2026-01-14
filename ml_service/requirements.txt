@@ -8,4 +8,4 @@ joblib
 fastapi
 uvicorn
 pydantic
-ta
+ta==0.11.0

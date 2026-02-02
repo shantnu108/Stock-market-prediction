@@ -29,38 +29,35 @@ router.get("/", async (req, res) => {
   }
 
   try {
-    const apiKey = process.env.ALPHA_VANTAGE_KEY;
+    // Yahoo Finance API - no API key required!
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?period1=${Math.floor((Date.now() - NUM_DAYS * 24 * 60 * 60 * 1000) / 1000)}&period2=${Math.floor(Date.now() / 1000)}&interval=1d`;
 
-    const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
-
-    const response = await axios.get(url);
-    const series = response.data["Time Series (Daily)"];
-
-    if (!series) {
-      // ⚠️ If rate-limited, serve ANY cached version for this symbol
-      const fallback = Object.keys(cache).find(
-        key => key.startsWith(`${symbol}_`)
-      );
-
-      if (fallback) {
-        console.warn("Rate limit hit, serving stale cache:", fallback);
-        return res.json(cache[fallback].data);
+    const response = await axios.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
       }
+    });
 
-      return res.status(429).json({
-        error: "Rate limit reached",
-        raw: response.data
-      });
+    const chart = response.data.chart;
+    if (!chart || !chart.result || chart.result.length === 0) {
+      return res.status(404).json({ error: "Symbol not found" });
     }
 
-    // 📈 Slice EXACT number of days requested
-    const dates = Object.keys(series)
-      .slice(0, NUM_DAYS)
-      .reverse();
+    const result = chart.result[0];
+    const timestamps = result.timestamp;
+    const quotes = result.indicators.quote[0];
 
-    const prices = dates.map(
-      d => Number(series[d]["4. close"])
-    );
+    if (!timestamps || !quotes || !quotes.close) {
+      return res.status(404).json({ error: "No data available for this symbol" });
+    }
+
+    // Convert timestamps to dates and get close prices
+    const dates = timestamps.map(ts => {
+      const date = new Date(ts * 1000);
+      return date.toISOString().split('T')[0];
+    });
+
+    const prices = quotes.close.filter(price => price !== null);
 
     const payload = {
       symbol,

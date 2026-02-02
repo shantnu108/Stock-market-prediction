@@ -59,8 +59,33 @@ export default function PriceChart({ symbol }) {
 
   if (error || !rawData) {
     return (
-      <div className="glass-card chart-box" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        {error || "No data available"}
+      <div className="glass-card chart-box" style={{ padding: '20px' }}>
+        <div style={{ color: '#ff6b6b', marginBottom: '10px' }}>
+          {error || "No data available"}
+        </div>
+        <div style={{ fontSize: '0.9em', color: '#ccc', marginTop: '10px' }}>
+          <p>Possible causes:</p>
+          <ul style={{ marginLeft: '20px', paddingLeft: '0' }}>
+            <li>• Alpha Vantage API key is missing or invalid</li>
+            <li>• API rate limit reached (5 requests/minute, 500/day on free tier)</li>
+            <li>• Network connectivity issue</li>
+            <li>• Invalid stock symbol: {symbol}</li>
+          </ul>
+        </div>
+        <button 
+          onClick={() => window.location.reload()} 
+          style={{
+            marginTop: '15px',
+            padding: '8px 16px',
+            background: '#38bdf8',
+            border: 'none',
+            borderRadius: '4px',
+            color: 'white',
+            cursor: 'pointer'
+          }}
+        >
+          Retry
+        </button>
       </div>
     );
   }

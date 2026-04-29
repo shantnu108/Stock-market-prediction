@@ -7,8 +7,10 @@ const axios = require("axios");
 // LOAD ENV FIRST
 dotenv.config();
 
-const predictRoutes = require("./routes/predict"); // FIXED NAME
+const predictRoutes = require("./routes/predict");
 const historyRoutes = require("./routes/history");
+const authRoutes = require("./routes/auth");
+const authMiddleware = require("./middleware/authMiddleware");
 
 const app = express();
 
@@ -21,8 +23,14 @@ app.use(express.json());
 // --------------------
 // ROUTES
 // --------------------
-app.use("/api", predictRoutes);
+// Auth routes (public)
+app.use("/api/auth", authRoutes);
+
+// History (public — must be before protected /api)
 app.use("/api/history", historyRoutes);
+
+// Protected routes (require JWT)
+app.use("/api", authMiddleware, predictRoutes);
 
 // --------------------
 // HEALTH CHECK

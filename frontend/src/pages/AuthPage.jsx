@@ -87,7 +87,7 @@ export default function AuthPage() {
                 id="auth-name"
                 className="auth-input"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Shantnu Swami"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 autoComplete="name"
@@ -102,7 +102,7 @@ export default function AuthPage() {
               id="auth-email"
               className="auth-input"
               type="email"
-              placeholder="you@example.com"
+              placeholder="dev@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"

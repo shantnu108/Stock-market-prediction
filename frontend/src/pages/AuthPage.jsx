@@ -87,7 +87,7 @@ export default function AuthPage() {
                 id="auth-name"
                 className="auth-input"
                 type="text"
-                placeholder="Shantnu Swami"
+                placeholder="---Enter the name here---"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 autoComplete="name"
